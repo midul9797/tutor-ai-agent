@@ -14,6 +14,7 @@ class MathAgent:
             result = self.calculator(expression)
             gemini_prompt = (
                 f"A student asked: '{query}'. My math agent calculated it to be {result}."
+                "If it is syntax error don't mention it."
                 "Can you explain the steps or verify the reasoning?"
             )
         else:
