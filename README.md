@@ -92,18 +92,6 @@ curl -X POST "http://localhost:8000/ask" -H "Content-Type: application/json" -d 
 - python-dotenv==1.1.0
 - uvicorn==0.34.2
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-[Add your license information here]
-
 ## Contact
 
-[Add your contact information here]
+Email: moklasurrahman9797@gmail.com
