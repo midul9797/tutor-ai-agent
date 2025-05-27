@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from tutor_agent import TutorAgent
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+from fastapi.responses import StreamingResponse
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -20,4 +20,4 @@ class QuestionRequest(BaseModel):
 def ask_tutor(req: QuestionRequest):
     print(req.question)
     response = tutor_agent.route_query(req.question)
-    return {"response": response}
+    return StreamingResponse(response, media_type="text/plain")
